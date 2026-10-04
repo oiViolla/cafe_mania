@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d8b58a;
+    background-image:
+        radial-gradient(#f0d8b5 1px, transparent 1px);
+    background-size: 12px 12px;
+    color: #4b2a18;
+}
+
+.site {
+    width: 900px;
+    margin: 20px auto;
+    background-color: #fff4df;
+    border: 4px ridge #8b5a2b;
+    box-shadow: 6px 6px 0 #6b4022;
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(
+        #d89a55,
+        #a85f25
+    );
+    border-bottom: 4px ridge #704016;
+}
+
+header h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #fff8e9;
+    text-shadow: 3px 3px #633512;
+}
+
+header p {
+    color: #fff1d1;
+    font-weight: bold;
+}
+
+/* MENU */
+
+nav {
+    text-align: center;
+    padding: 12px;
+    background-color: #542d18;
+    border-bottom: 3px solid #9a683c;
+}
+
+nav a {
+    display: inline-block;
+    margin: 4px;
+    padding: 8px 13px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px outset #d39b64;
+    background-color: #8b512b;
+}
+
+nav a:hover {
+    background-color: #d68b42;
+    color: #3d1c0d;
+    border-style: inset;
+}
+
+/* CONTEÚDO */
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 18px;
+    background-color: #fffaf0;
+    border: 2px solid #bd8b5b;
+}
+
+section h2 {
+    margin-top: 0;
+    padding: 8px;
+    color: #603415;
+    background-color: #ead0ad;
+    border-bottom: 3px dotted #8b572f;
+    font-family: Georgia, serif;
+}
+
+/* DESTAQUE */
+
+.cafe-destaque {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #ead4b5;
+    border: 3px double #89532d;
+}
+
+.cafe-destaque span {
+    font-size: 60px;
+}
+
+.cafe-destaque h3 {
+    margin: 0;
+    color: #733c1c;
+}
+
+/* CARDS */
+
+.cafes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.card {
+    text-align: center;
+    padding: 15px;
+    background-color: #f1dfc5;
+    border: 3px outset #b98250;
+}
+
+.card:hover {
+    background-color: #ffe9c9;
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    color: #663515;
+}
+
+.icone {
+    font-size: 42px;
+}
+
+/* GALERIA */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.foto {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid #8b5a35;
+    box-shadow: 3px 3px 0 #b68a61;
+}
+
+.foto div {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #ead4b4,
+        #c28a55
+    );
+    font-size: 65px;
+}
+
+.foto p {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/* CURIOSIDADE */
+
+.curiosidade {
+    text-align: center;
+    background-color: #e7c18e;
+    border: 4px double #80502e;
+}
+
+/* FORMULÁRIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 2px inset #b68a61;
+    background-color: #fffdf8;
+    font-family: Arial;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px;
+    background-color: #78421f;
+    color: white;
+    border: 3px outset #c99565;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a45e2c;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 18px;
+    background-color: #542d18;
+    color: #ffe6bf;
+    border-top: 4px ridge #9c6238;
+    font-size: 13px;
+}
+
+.visitantes {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    border: 2px inset gray;
+}
+
+/* CELULAR */
+
+@media (max-width: 950px) {
+
+    .site {
+        width: 95%;
+    }
+
+    .cafes,
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cafes,
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: block;
+    }
+}
